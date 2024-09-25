@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 - mashq</title>
+</head>
+<body>
+    <div id="container">
+        <p id="newElement">Bu eski paragraf.</p>
+    </div>
+    <button onclick="replaceElement()">Almashtirish</button>
+    <script>
+        function replaceElement() {
+            const NewParagraph = document.createElement('p');
+            const text = document.createTextNode('Bu yangi paragraf');
+            NewParagraph.appendChild(text);
+            const container = document.getElementById('container');
+            const newElement = document.getElementById('newElement');
+            container.replaceChild(NewParagraph, newElement);
+        }
+    </script>
+</body>
+</html>

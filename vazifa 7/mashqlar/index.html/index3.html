@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 - mashq</title>
+</head>
+<body>
+    <img src="./images/img1.png" id="myImage" alt="Old image"> <br>
+    <button onclick="changes()">Change image</button>
+    <script>
+        function changes() {
+            let img = document.querySelector('#myImage');
+            img.setAttribute('src', './images/new_img1.png');
+    }
+    </script>
+</body>
+</html>

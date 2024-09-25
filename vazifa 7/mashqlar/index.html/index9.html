@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9 - mashq</title>
+</head>
+<body>
+    <div class="class1">DIV 1</div>
+    <div class="class2">DIV 2</div>
+    <div class="class1">DIV 1</div>
+    <div class="class2">DIV 2</div>
+    <button onclick="filter()">Filtirlash bos</button>
+    <script>
+        let myDiv = document.querySelectorAll('div');
+        function filter() {
+            myDiv.forEach(function(div) {
+                if (div.classList.contains('class1')) {
+                    div.style.display = 'block';
+                } else if (div.classList.contains('class2')) {
+                    div.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

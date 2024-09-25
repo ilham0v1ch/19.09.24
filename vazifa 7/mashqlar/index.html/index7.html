@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7 - mashq</title>
+    <style>
+        .aqua {
+             color: aqua;
+        }
+
+        .red {
+             color: red;
+        }
+
+        .green {
+             color: green;
+        }
+
+        .yellow {
+             color: yellow;
+        }
+
+        .purple {
+             color: purple;
+        }
+   </style>
+</head>
+<body>
+    <div id="container"></div>
+    <button onclick="addelem()">Bos</button>
+    <script>
+        let container = document.querySelector('#container');
+        function addelem() {
+            let newElement = document.createElement('ul');
+            let a = 0;
+            while(a < 5) {
+                if (a === 0) color = 'aqua'
+                if (a === 1) color = 'red'
+                if (a === 2) color = 'green'
+                if (a === 3) color = 'yellow'
+                if (a === 4) color = 'purple'
+                let newItem = document.createElement('li');
+                    newElement.appendChild(newItem);
+                newItem.textContent = `Element №${a + 1}`;
+                    container.appendChild(newElement);
+                newItem.classList.add(`${color}`);
+                    a++;
+            }
+        }
+    </script>
+</body>
+</html>
